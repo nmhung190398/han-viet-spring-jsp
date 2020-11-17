@@ -1,0 +1,8 @@
+.modal-dialog {
+    max-width: unset;
+    width: 75%;
+}
+
+table, thead, tbody, td, th {
+    font-size: 13px;
+}
