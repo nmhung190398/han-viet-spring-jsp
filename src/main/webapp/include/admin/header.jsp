@@ -2683,7 +2683,7 @@
                                 <input class="form-control form-control-lg" placeholder="Tài khoản" name="username"/>
                             </div>
                             <div class="col-12  form-group">
-                                <input class="form-control  form-control-lg"  placeholder="Mật khẩu" name="password" />
+                                <input type="password" class="form-control  form-control-lg"  placeholder="Mật khẩu" name="password" />
                             </div>
 
                             <div class="col-12  form-group">
