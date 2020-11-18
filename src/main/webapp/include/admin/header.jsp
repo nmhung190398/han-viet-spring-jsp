@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!--begin::Header Mobile-->
 <div
         id="kt_header_mobile"
@@ -13,7 +14,7 @@
 >
     <!--begin::Logo-->
     <a href="index.html">
-        <img alt="Logo" src="<%=request.getContextPath() %>/resources/assets/media/logos/logo-light.png" />
+        <img alt="Logo" src="<%=request.getContextPath() %>/resources/assets/media/logos/logo-light.png"/>
     </a>
     <!--end::Logo-->
     <!--begin::Toolbar-->
@@ -47,7 +48,7 @@
                     version="1.1"
             >
               <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <polygon points="0 0 24 0 24 24 0 24" />
+                <polygon points="0 0 24 0 24 24 0 24"/>
                 <path
                         d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z"
                         fill="#000000"
@@ -122,7 +123,7 @@
                                           fill="none"
                                           fill-rule="evenodd"
                                   >
-                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect x="0" y="0" width="24" height="24"/>
                                     <path
                                             d="M5.84026576,8 L18.1597342,8 C19.1999115,8 20.0664437,8.79732479 20.1528258,9.83390904 L20.8194924,17.833909 C20.9112219,18.9346631 20.0932459,19.901362 18.9924919,19.9930915 C18.9372479,19.9976952 18.8818364,20 18.8264009,20 L5.1735991,20 C4.0690296,20 3.1735991,19.1045695 3.1735991,18 C3.1735991,17.9445645 3.17590391,17.889153 3.18050758,17.833909 L3.84717425,9.83390904 C3.93355627,8.79732479 4.80008849,8 5.84026576,8 Z M10.5,10 C10.2238576,10 10,10.2238576 10,10.5 L10,11.5 C10,11.7761424 10.2238576,12 10.5,12 L13.5,12 C13.7761424,12 14,11.7761424 14,11.5 L14,10.5 C14,10.2238576 13.7761424,10 13.5,10 L10.5,10 Z"
                                             fill="#000000"
@@ -158,7 +159,7 @@
                                           fill="none"
                                           fill-rule="evenodd"
                                   >
-                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect x="0" y="0" width="24" height="24"/>
                                     <path
                                             d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z"
                                             fill="#000000"
@@ -205,7 +206,7 @@
                                           fill="none"
                                           fill-rule="evenodd"
                                   >
-                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect x="0" y="0" width="24" height="24"/>
                                     <path
                                             d="M9,15 L7.5,15 C6.67157288,15 6,15.6715729 6,16.5 C6,17.3284271 6.67157288,18 7.5,18 C8.32842712,18 9,17.3284271 9,16.5 L9,15 Z M9,15 L9,9 L15,9 L15,15 L9,15 Z M15,16.5 C15,17.3284271 15.6715729,18 16.5,18 C17.3284271,18 18,17.3284271 18,16.5 C18,15.6715729 17.3284271,15 16.5,15 L15,15 L15,16.5 Z M16.5,9 C17.3284271,9 18,8.32842712 18,7.5 C18,6.67157288 17.3284271,6 16.5,6 C15.6715729,6 15,6.67157288 15,7.5 L15,9 L16.5,9 Z M9,7.5 C9,6.67157288 8.32842712,6 7.5,6 C6.67157288,6 6,6.67157288 6,7.5 C6,8.32842712 6.67157288,9 7.5,9 L9,9 L9,7.5 Z M11,13 L13,13 L13,11 L11,11 L11,13 Z M13,11 L13,7.5 C13,5.56700338 14.5670034,4 16.5,4 C18.4329966,4 20,5.56700338 20,7.5 C20,9.43299662 18.4329966,11 16.5,11 L13,11 Z M16.5,13 C18.4329966,13 20,14.5670034 20,16.5 C20,18.4329966 18.4329966,20 16.5,20 C14.5670034,20 13,18.4329966 13,16.5 L13,13 L16.5,13 Z M11,16.5 C11,18.4329966 9.43299662,20 7.5,20 C5.56700338,20 4,18.4329966 4,16.5 C4,14.5670034 5.56700338,13 7.5,13 L11,13 L11,16.5 Z M7.5,11 C5.56700338,11 4,9.43299662 4,7.5 C4,5.56700338 5.56700338,4 7.5,4 C9.43299662,4 11,5.56700338 11,7.5 L11,11 L7.5,11 Z"
                                             fill="#000000"
@@ -305,7 +306,7 @@
                                           fill="none"
                                           fill-rule="evenodd"
                                   >
-                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect x="0" y="0" width="24" height="24"/>
                                     <path
                                             d="M22,15 L22,19 C22,20.1045695 21.1045695,21 20,21 L4,21 C2.8954305,21 2,20.1045695 2,19 L2,15 L6.27924078,15 L6.82339262,16.6324555 C7.09562072,17.4491398 7.8598984,18 8.72075922,18 L15.381966,18 C16.1395101,18 16.8320364,17.5719952 17.1708204,16.8944272 L18.118034,15 L22,15 Z"
                                             fill="#000000"
@@ -397,7 +398,7 @@
                                           fill="none"
                                           fill-rule="evenodd"
                                   >
-                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect x="0" y="0" width="24" height="24"/>
                                     <path
                                             d="M4.5,3 L19.5,3 C20.3284271,3 21,3.67157288 21,4.5 L21,19.5 C21,20.3284271 20.3284271,21 19.5,21 L4.5,21 C3.67157288,21 3,20.3284271 3,19.5 L3,4.5 C3,3.67157288 3.67157288,3 4.5,3 Z M8,5 C7.44771525,5 7,5.44771525 7,6 C7,6.55228475 7.44771525,7 8,7 L16,7 C16.5522847,7 17,6.55228475 17,6 C17,5.44771525 16.5522847,5 16,5 L8,5 Z M10.5857864,14 L9.17157288,15.4142136 C8.78104858,15.8047379 8.78104858,16.4379028 9.17157288,16.8284271 C9.56209717,17.2189514 10.1952621,17.2189514 10.5857864,16.8284271 L12,15.4142136 L13.4142136,16.8284271 C13.8047379,17.2189514 14.4379028,17.2189514 14.8284271,16.8284271 C15.2189514,16.4379028 15.2189514,15.8047379 14.8284271,15.4142136 L13.4142136,14 L14.8284271,12.5857864 C15.2189514,12.1952621 15.2189514,11.5620972 14.8284271,11.1715729 C14.4379028,10.7810486 13.8047379,10.7810486 13.4142136,11.1715729 L12,12.5857864 L10.5857864,11.1715729 C10.1952621,10.7810486 9.56209717,10.7810486 9.17157288,11.1715729 C8.78104858,11.5620972 8.78104858,12.1952621 9.17157288,12.5857864 L10.5857864,14 Z"
                                             fill="#000000"
@@ -867,7 +868,7 @@
                                           fill="none"
                                           fill-rule="evenodd"
                                   >
-                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect x="0" y="0" width="24" height="24"/>
                                     <path
                                             d="M8,17 C8.55228475,17 9,17.4477153 9,18 L9,21 C9,21.5522847 8.55228475,22 8,22 L3,22 C2.44771525,22 2,21.5522847 2,21 L2,18 C2,17.4477153 2.44771525,17 3,17 L3,16.5 C3,15.1192881 4.11928813,14 5.5,14 C6.88071187,14 8,15.1192881 8,16.5 L8,17 Z M5.5,15 C4.67157288,15 4,15.6715729 4,16.5 L4,17 L7,17 L7,16.5 C7,15.6715729 6.32842712,15 5.5,15 Z"
                                             fill="#000000"
@@ -909,7 +910,7 @@
                                           fill="none"
                                           fill-rule="evenodd"
                                   >
-                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect x="0" y="0" width="24" height="24"/>
                                     <path
                                             d="M3,13.5 L19,12 L3,10.5 L3,3.7732928 C3,3.70255344 3.01501031,3.63261921 3.04403925,3.56811047 C3.15735832,3.3162903 3.45336217,3.20401298 3.70518234,3.31733205 L21.9867539,11.5440392 C22.098181,11.5941815 22.1873901,11.6833905 22.2375323,11.7948177 C22.3508514,12.0466378 22.2385741,12.3426417 21.9867539,12.4559608 L3.70518234,20.6826679 C3.64067359,20.7116969 3.57073936,20.7267072 3.5,20.7267072 C3.22385763,20.7267072 3,20.5028496 3,20.2267072 L3,13.5 Z"
                                             fill="#000000"
@@ -992,7 +993,7 @@
                                           fill="none"
                                           fill-rule="evenodd"
                                   >
-                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect x="0" y="0" width="24" height="24"/>
                                     <path
                                             d="M11.575,21.2 C6.175,21.2 2.85,17.4 2.85,12.575 C2.85,6.875 7.375,3.05 12.525,3.05 C17.45,3.05 21.125,6.075 21.125,10.85 C21.125,15.2 18.825,16.925 16.525,16.925 C15.4,16.925 14.475,16.4 14.075,15.65 C13.3,16.4 12.125,16.875 11,16.875 C8.25,16.875 6.85,14.925 6.85,12.575 C6.85,9.55 9.05,7.1 12.275,7.1 C13.2,7.1 13.95,7.35 14.525,7.775 L14.625,7.35 L17,7.35 L15.825,12.85 C15.6,13.95 15.85,14.825 16.925,14.825 C18.25,14.825 19.025,13.725 19.025,10.8 C19.025,6.9 15.95,5.075 12.5,5.075 C8.625,5.075 5.05,7.75 5.05,12.575 C5.05,16.525 7.575,19.1 11.575,19.1 C13.075,19.1 14.625,18.775 15.975,18.075 L16.8,20.1 C15.25,20.8 13.2,21.2 11.575,21.2 Z M11.4,14.525 C12.05,14.525 12.7,14.35 13.225,13.825 L14.025,10.125 C13.575,9.65 12.925,9.425 12.3,9.425 C10.65,9.425 9.45,10.7 9.45,12.375 C9.45,13.675 10.075,14.525 11.4,14.525 Z"
                                             fill="#000000"
@@ -1024,7 +1025,7 @@
                                           fill="none"
                                           fill-rule="evenodd"
                                   >
-                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect x="0" y="0" width="24" height="24"/>
                                     <polygon
                                             fill="#000000"
                                             opacity="0.3"
@@ -1071,7 +1072,7 @@
                                           fill="none"
                                           fill-rule="evenodd"
                                   >
-                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect x="0" y="0" width="24" height="24"/>
                                     <path
                                             d="M16,15.6315789 L16,12 C16,10.3431458 14.6568542,9 13,9 L6.16183229,9 L6.16183229,5.52631579 C6.16183229,4.13107011 7.29290239,3 8.68814808,3 L20.4776218,3 C21.8728674,3 23.0039375,4.13107011 23.0039375,5.52631579 L23.0039375,13.1052632 L23.0206157,17.786793 C23.0215995,18.0629336 22.7985408,18.2875874 22.5224001,18.2885711 C22.3891754,18.2890457 22.2612702,18.2363324 22.1670655,18.1421277 L19.6565168,15.6315789 L16,15.6315789 Z"
                                             fill="#000000"
@@ -1177,7 +1178,7 @@
                                   fill="none"
                                   fill-rule="evenodd"
                           >
-                            <rect x="0" y="0" width="24" height="24" />
+                            <rect x="0" y="0" width="24" height="24"/>
                             <path
                                     d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
                                     fill="#000000"
@@ -1225,7 +1226,7 @@
                                           fill="none"
                                           fill-rule="evenodd"
                                   >
-                                    <rect x="0" y="0" width="24" height="24" />
+                                    <rect x="0" y="0" width="24" height="24"/>
                                     <path
                                             d="M14.2928932,16.7071068 C13.9023689,16.3165825 13.9023689,15.6834175 14.2928932,15.2928932 C14.6834175,14.9023689 15.3165825,14.9023689 15.7071068,15.2928932 L19.7071068,19.2928932 C20.0976311,19.6834175 20.0976311,20.3165825 19.7071068,20.7071068 C19.3165825,21.0976311 18.6834175,21.0976311 18.2928932,20.7071068 L14.2928932,16.7071068 Z"
                                             fill="#000000"
@@ -1298,7 +1299,7 @@
                                   fill="none"
                                   fill-rule="evenodd"
                           >
-                            <rect x="0" y="0" width="24" height="24" />
+                            <rect x="0" y="0" width="24" height="24"/>
                             <path
                                     d="M2.56066017,10.6819805 L4.68198052,8.56066017 C5.26776695,7.97487373 6.21751442,7.97487373 6.80330086,8.56066017 L8.9246212,10.6819805 C9.51040764,11.267767 9.51040764,12.2175144 8.9246212,12.8033009 L6.80330086,14.9246212 C6.21751442,15.5104076 5.26776695,15.5104076 4.68198052,14.9246212 L2.56066017,12.8033009 C1.97487373,12.2175144 1.97487373,11.267767 2.56066017,10.6819805 Z M14.5606602,10.6819805 L16.6819805,8.56066017 C17.267767,7.97487373 18.2175144,7.97487373 18.8033009,8.56066017 L20.9246212,10.6819805 C21.5104076,11.267767 21.5104076,12.2175144 20.9246212,12.8033009 L18.8033009,14.9246212 C18.2175144,15.5104076 17.267767,15.5104076 16.6819805,14.9246212 L14.5606602,12.8033009 C13.9748737,12.2175144 13.9748737,11.267767 14.5606602,10.6819805 Z"
                                     fill="#000000"
@@ -2113,7 +2114,7 @@
                                 <div
                                         class="d-flex flex-center text-center text-muted min-h-200px"
                                 >
-                                    All caught up! <br />No new notifications.
+                                    All caught up! <br/>No new notifications.
                                 </div>
                                 <!--end::Nav-->
                             </div>
@@ -2152,7 +2153,7 @@
                                   fill="none"
                                   fill-rule="evenodd"
                           >
-                            <rect x="0" y="0" width="24" height="24" />
+                            <rect x="0" y="0" width="24" height="24"/>
                             <rect
                                     fill="#000000"
                                     opacity="0.3"
@@ -2233,7 +2234,7 @@
                                       fill="none"
                                       fill-rule="evenodd"
                               >
-                                <rect x="0" y="0" width="24" height="24" />
+                                <rect x="0" y="0" width="24" height="24"/>
                                 <path
                                         d="M4.3618034,10.2763932 L4.8618034,9.2763932 C4.94649941,9.10700119 5.11963097,9 5.30901699,9 L15.190983,9 C15.4671254,9 15.690983,9.22385763 15.690983,9.5 C15.690983,9.57762255 15.6729105,9.65417908 15.6381966,9.7236068 L15.1381966,10.7236068 C15.0535006,10.8929988 14.880369,11 14.690983,11 L4.80901699,11 C4.53287462,11 4.30901699,10.7761424 4.30901699,10.5 C4.30901699,10.4223775 4.32708954,10.3458209 4.3618034,10.2763932 Z M14.6381966,13.7236068 L14.1381966,14.7236068 C14.0535006,14.8929988 13.880369,15 13.690983,15 L4.80901699,15 C4.53287462,15 4.30901699,14.7761424 4.30901699,14.5 C4.30901699,14.4223775 4.32708954,14.3458209 4.3618034,14.2763932 L4.8618034,13.2763932 C4.94649941,13.1070012 5.11963097,13 5.30901699,13 L14.190983,13 C14.4671254,13 14.690983,13.2238576 14.690983,13.5 C14.690983,13.5776225 14.6729105,13.6541791 14.6381966,13.7236068 Z"
                                         fill="#000000"
@@ -2279,7 +2280,7 @@
                                       fill="none"
                                       fill-rule="evenodd"
                               >
-                                <rect x="0" y="0" width="24" height="24" />
+                                <rect x="0" y="0" width="24" height="24"/>
                                 <path
                                         d="M14.8571499,13 C14.9499122,12.7223297 15,12.4263059 15,12.1190476 L15,6.88095238 C15,5.28984632 13.6568542,4 12,4 L11.7272727,4 C10.2210416,4 9,5.17258756 9,6.61904762 L10.0909091,6.61904762 C10.0909091,5.75117158 10.823534,5.04761905 11.7272727,5.04761905 L12,5.04761905 C13.0543618,5.04761905 13.9090909,5.86843034 13.9090909,6.88095238 L13.9090909,12.1190476 C13.9090909,12.4383379 13.8240964,12.7385644 13.6746497,13 L10.3253503,13 C10.1759036,12.7385644 10.0909091,12.4383379 10.0909091,12.1190476 L10.0909091,9.5 C10.0909091,9.06606198 10.4572216,8.71428571 10.9090909,8.71428571 C11.3609602,8.71428571 11.7272727,9.06606198 11.7272727,9.5 L11.7272727,11.3333333 L12.8181818,11.3333333 L12.8181818,9.5 C12.8181818,8.48747796 11.9634527,7.66666667 10.9090909,7.66666667 C9.85472911,7.66666667 9,8.48747796 9,9.5 L9,12.1190476 C9,12.4263059 9.0500878,12.7223297 9.14285008,13 L6,13 C5.44771525,13 5,12.5522847 5,12 L5,3 C5,2.44771525 5.44771525,2 6,2 L18,2 C18.5522847,2 19,2.44771525 19,3 L19,12 C19,12.5522847 18.5522847,13 18,13 L14.8571499,13 Z"
                                         fill="#000000"
@@ -2325,7 +2326,7 @@
                                       fill="none"
                                       fill-rule="evenodd"
                               >
-                                <rect x="0" y="0" width="24" height="24" />
+                                <rect x="0" y="0" width="24" height="24"/>
                                 <path
                                         d="M4,9.67471899 L10.880262,13.6470401 C10.9543486,13.689814 11.0320333,13.7207107 11.1111111,13.740321 L11.1111111,21.4444444 L4.49070127,17.526473 C4.18655139,17.3464765 4,17.0193034 4,16.6658832 L4,9.67471899 Z M20,9.56911707 L20,16.6658832 C20,17.0193034 19.8134486,17.3464765 19.5092987,17.526473 L12.8888889,21.4444444 L12.8888889,13.6728275 C12.9050191,13.6647696 12.9210067,13.6561758 12.9368301,13.6470401 L20,9.56911707 Z"
                                         fill="#000000"
@@ -2371,7 +2372,7 @@
                                       fill="none"
                                       fill-rule="evenodd"
                               >
-                                <polygon points="0 0 24 0 24 24 0 24" />
+                                <polygon points="0 0 24 0 24 24 0 24"/>
                                 <path
                                         d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z"
                                         fill="#000000"
@@ -2425,7 +2426,7 @@
                                 fill="none"
                                 fill-rule="evenodd"
                         >
-                          <rect x="0" y="0" width="24" height="24" />
+                          <rect x="0" y="0" width="24" height="24"/>
                           <path
                                   d="M12,4.56204994 L7.76822128,9.6401844 C7.4146572,10.0644613 6.7840925,10.1217854 6.3598156,9.76822128 C5.9355387,9.4146572 5.87821464,8.7840925 6.23177872,8.3598156 L11.2317787,2.3598156 C11.6315738,1.88006147 12.3684262,1.88006147 12.7682213,2.3598156 L17.7682213,8.3598156 C18.1217854,8.7840925 18.0644613,9.4146572 17.6401844,9.76822128 C17.2159075,10.1217854 16.5853428,10.0644613 16.2317787,9.6401844 L12,4.56204994 Z"
                                   fill="#000000"
@@ -2465,7 +2466,7 @@
                                 fill="none"
                                 fill-rule="evenodd"
                         >
-                          <rect x="0" y="0" width="24" height="24" />
+                          <rect x="0" y="0" width="24" height="24"/>
                           <rect
                                   fill="#000000"
                                   x="4"
@@ -2509,7 +2510,7 @@
                                 fill="none"
                                 fill-rule="evenodd"
                         >
-                          <rect x="0" y="0" width="24" height="24" />
+                          <rect x="0" y="0" width="24" height="24"/>
                           <path
                                   d="M16,15.6315789 L16,12 C16,10.3431458 14.6568542,9 13,9 L6.16183229,9 L6.16183229,5.52631579 C6.16183229,4.13107011 7.29290239,3 8.68814808,3 L20.4776218,3 C21.8728674,3 23.0039375,4.13107011 23.0039375,5.52631579 L23.0039375,13.1052632 L23.0206157,17.786793 C23.0215995,18.0629336 22.7985408,18.2875874 22.5224001,18.2885711 C22.3891754,18.2890457 22.2612702,18.2363324 22.1670655,18.1421277 L19.6565168,15.6315789 L16,15.6315789 Z"
                                   fill="#000000"
@@ -2527,123 +2528,133 @@
             </div>
             <!--end::Chat-->
             <!--begin::Languages-->
-            <div class="dropdown">
-                <!--begin::Toggle-->
-                <div
-                        class="topbar-item"
-                        data-toggle="dropdown"
-                        data-offset="10px,0px"
-                >
-                    <div
-                            class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1"
-                    >
-                        <img
-                                class="h-20px w-20px rounded-sm"
-                                src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/226-united-states.svg"
-                                alt=""
-                        />
-                    </div>
-                </div>
-                <!--end::Toggle-->
-                <!--begin::Dropdown-->
-                <div
-                        class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right"
-                >
-                    <!--begin::Nav-->
-                    <ul class="navi navi-hover py-4">
-                        <!--begin::Item-->
-                        <li class="navi-item">
-                            <a href="#" class="navi-link">
-                          <span class="symbol symbol-20 mr-3">
-                            <img
-                                    src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/226-united-states.svg"
-                                    alt=""
-                            />
-                          </span>
-                                <span class="navi-text">English</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="navi-item active">
-                            <a href="#" class="navi-link">
-                          <span class="symbol symbol-20 mr-3">
-                            <img
-                                    src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/128-spain.svg"
-                                    alt=""
-                            />
-                          </span>
-                                <span class="navi-text">Spanish</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="navi-item">
-                            <a href="#" class="navi-link">
-                          <span class="symbol symbol-20 mr-3">
-                            <img
-                                    src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/162-germany.svg"
-                                    alt=""
-                            />
-                          </span>
-                                <span class="navi-text">German</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="navi-item">
-                            <a href="#" class="navi-link">
-                          <span class="symbol symbol-20 mr-3">
-                            <img
-                                    src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/063-japan.svg"
-                                    alt=""
-                            />
-                          </span>
-                                <span class="navi-text">Japanese</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                        <!--begin::Item-->
-                        <li class="navi-item">
-                            <a href="#" class="navi-link">
-                          <span class="symbol symbol-20 mr-3">
-                            <img
-                                    src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/195-france.svg"
-                                    alt=""
-                            />
-                          </span>
-                                <span class="navi-text">French</span>
-                            </a>
-                        </li>
-                        <!--end::Item-->
-                    </ul>
-                    <!--end::Nav-->
-                </div>
-                <!--end::Dropdown-->
-            </div>
+            <%--<div class="dropdown">--%>
+                <%--<!--begin::Toggle-->--%>
+                <%--<div--%>
+                        <%--class="topbar-item"--%>
+                        <%--data-toggle="dropdown"--%>
+                        <%--data-offset="10px,0px"--%>
+                <%-->--%>
+                    <%--<div--%>
+                            <%--class="btn btn-icon btn-clean btn-dropdown btn-lg mr-1"--%>
+                    <%-->--%>
+                        <%--<img--%>
+                                <%--class="h-20px w-20px rounded-sm"--%>
+                                <%--src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/226-united-states.svg"--%>
+                                <%--alt=""--%>
+                        <%--/>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
+                <%--<!--end::Toggle-->--%>
+                <%--<!--begin::Dropdown-->--%>
+                <%--<div--%>
+                        <%--class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right"--%>
+                <%-->--%>
+                    <%--<!--begin::Nav-->--%>
+                    <%--<ul class="navi navi-hover py-4">--%>
+                        <%--<!--begin::Item-->--%>
+                        <%--<li class="navi-item">--%>
+                            <%--<a href="#" class="navi-link">--%>
+                          <%--<span class="symbol symbol-20 mr-3">--%>
+                            <%--<img--%>
+                                    <%--src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/226-united-states.svg"--%>
+                                    <%--alt=""--%>
+                            <%--/>--%>
+                          <%--</span>--%>
+                                <%--<span class="navi-text">English</span>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<!--end::Item-->--%>
+                        <%--<!--begin::Item-->--%>
+                        <%--<li class="navi-item active">--%>
+                            <%--<a href="#" class="navi-link">--%>
+                          <%--<span class="symbol symbol-20 mr-3">--%>
+                            <%--<img--%>
+                                    <%--src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/128-spain.svg"--%>
+                                    <%--alt=""--%>
+                            <%--/>--%>
+                          <%--</span>--%>
+                                <%--<span class="navi-text">Spanish</span>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<!--end::Item-->--%>
+                        <%--<!--begin::Item-->--%>
+                        <%--<li class="navi-item">--%>
+                            <%--<a href="#" class="navi-link">--%>
+                          <%--<span class="symbol symbol-20 mr-3">--%>
+                            <%--<img--%>
+                                    <%--src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/162-germany.svg"--%>
+                                    <%--alt=""--%>
+                            <%--/>--%>
+                          <%--</span>--%>
+                                <%--<span class="navi-text">German</span>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<!--end::Item-->--%>
+                        <%--<!--begin::Item-->--%>
+                        <%--<li class="navi-item">--%>
+                            <%--<a href="#" class="navi-link">--%>
+                          <%--<span class="symbol symbol-20 mr-3">--%>
+                            <%--<img--%>
+                                    <%--src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/063-japan.svg"--%>
+                                    <%--alt=""--%>
+                            <%--/>--%>
+                          <%--</span>--%>
+                                <%--<span class="navi-text">Japanese</span>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<!--end::Item-->--%>
+                        <%--<!--begin::Item-->--%>
+                        <%--<li class="navi-item">--%>
+                            <%--<a href="#" class="navi-link">--%>
+                          <%--<span class="symbol symbol-20 mr-3">--%>
+                            <%--<img--%>
+                                    <%--src="<%=request.getContextPath() %>/resources/assets/media/svg/flags/195-france.svg"--%>
+                                    <%--alt=""--%>
+                            <%--/>--%>
+                          <%--</span>--%>
+                                <%--<span class="navi-text">French</span>--%>
+                            <%--</a>--%>
+                        <%--</li>--%>
+                        <%--<!--end::Item-->--%>
+                    <%--</ul>--%>
+                    <%--<!--end::Nav-->--%>
+                <%--</div>--%>
+                <%--<!--end::Dropdown-->--%>
+            <%--</div>--%>
             <!--end::Languages-->
             <!--begin::User-->
             <div class="topbar-item">
-                <div
-                        class="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2"
-                        id="kt_quick_user_toggle"
-                >
+                <c:choose>
+                    <c:when test="${IS_LOGIN}">
+                        <div
+                                class="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2"
+                                id="kt_quick_user_toggle"
+                        >
                     <span
                             class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1"
-                    >Hi,</span
+                    >Xin chào,</span
                     >
-                    <span
-                            class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3"
-                    >Sean</span
-                    >
-                    <span
-                            class="symbol symbol-lg-35 symbol-25 symbol-light-success"
-                    >
-                      <span class="symbol-label font-size-h5 font-weight-bold"
-                      >S</span
-                      >
+                            <span
+                                    class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3"
+                            >Admin</span
+                            >
+                            <span
+                                    class="symbol symbol-lg-35 symbol-25 symbol-light-success"
+                            >
+
                     </span>
-                </div>
+                        </div>
+
+                        <a href="/logout" class="btn btn-danger"
+                        >Đăng xuất</a
+                        >
+                    </c:when>
+                    <c:otherwise>
+                        <button data-toggle="modal" data-target="#modal-login" class="btn btn-info" id="btn-login" type="button">Đăng nhập</button>
+                    </c:otherwise>
+                </c:choose>
+
             </div>
             <!--end::User-->
         </div>
@@ -2652,3 +2663,45 @@
     <!--end::Container-->
 </div>
 <!--end::Header-->
+
+
+<%--popup login--%>
+
+<!--begin::Modal-->
+<!-- Modal -->
+<div class="modal fade right " tabindex="-1" role="dialog" id="modal-login"
+      aria-hidden="true">
+    <div class="modal-dialog-full-width modal-dialog modal-dialog-centered w-450px" role="document">
+        <div class="modal-content-full-width modal-content " style="">
+
+            <div class="modal-body">
+                <!--begin::Form-->
+                <div class="kt-portlet__body">
+                    <form id="login" method="POST" action="/login">
+                        <div class="row">
+                            <div class="col-12  form-group">
+                                <input class="form-control form-control-lg" placeholder="Tài khoản" name="username"/>
+                            </div>
+                            <div class="col-12  form-group">
+                                <input class="form-control  form-control-lg"  placeholder="Mật khẩu" name="password" />
+                            </div>
+
+                            <div class="col-12  form-group">
+                                <button type="submit" class="btn btn-success">Đăng nhập</button>
+
+                                <a type="button" class="btn btn-danger btn-md btn-rounded btn-modal-close" data-dismiss="modal">
+                                    Đóng
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+                <!--end::Form-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--end::Modal-->

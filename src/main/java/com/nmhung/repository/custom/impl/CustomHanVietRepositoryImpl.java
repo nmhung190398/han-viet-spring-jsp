@@ -60,25 +60,25 @@ public class CustomHanVietRepositoryImpl implements CustomHanVietRepository {
     }
 
     private String createOrderQuery(HanVietSearchRequest request) {
-        return "";
+        return " order by H.amDoc, H.id desc ";
     }
 
     private String createWhereQuery(HanVietSearchRequest request, Map<String, Object> values) {
         String hql =  " where 1 = 1 ";
         if(StringUtils.isNotBlank(request.keyword)){
             hql += "AND ( lower(H.amDoc) like :amDoc " +
-                    "OR lower(H.nghia) like :nghia " +
-                    "OR lower(H.nghiaHan) like :nghiaHan " +
-                    "OR lower(H.tuGhep) like :tuGhep " +
-                    "OR lower(H.boThu) like :boThu " +
-                    "OR lower(H.chuViet) like :chuViet " +
+//                    "OR lower(H.nghia) like :nghia " +
+//                    "OR lower(H.nghiaHan) like :nghiaHan " +
+//                    "OR lower(H.tuGhep) like :tuGhep " +
+//                    "OR lower(H.boThu) like :boThu " +
+//                    "OR lower(H.chuViet) like :chuViet " +
                     " ) ";
             values.put("amDoc","%" + request.keyword + "%");
-            values.put("nghia","%" + request.keyword + "%");
-            values.put("nghiaHan","%" + request.keyword + "%");
-            values.put("tuGhep","%" + request.keyword + "%");
-            values.put("boThu","%" + request.keyword + "%");
-            values.put("chuViet","%" + request.keyword + "%");
+//            values.put("nghia","%" + request.keyword + "%");
+//            values.put("nghiaHan","%" + request.keyword + "%");
+//            values.put("tuGhep","%" + request.keyword + "%");
+//            values.put("boThu","%" + request.keyword + "%");
+//            values.put("chuViet","%" + request.keyword + "%");
         }
 
         return hql;

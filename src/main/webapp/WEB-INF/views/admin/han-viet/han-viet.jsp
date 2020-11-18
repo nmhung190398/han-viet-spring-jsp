@@ -47,32 +47,34 @@
                         <div class="d-flex align-items-center flex-wrap mr-2">
                             <!--begin::Page Title-->
                             <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">
-                                Strong Hero Nguyễn
+                                Dev Nguyễn
                             </h5>
                             <!--end::Page Title-->
                             <!--begin::Actions-->
                             <div
                                     class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"
                             ></div>
-                            >
 
-                            <button onclick="onShowModalEditItem()"
-                                    type="button"
-                                    class="mx-3 btn btn-light-info font-weight-bolder btn-sm"
-                            >Add New
-                            </button>
+                            <c:if test="${IS_LOGIN}">
+                                <button onclick="onShowModalEditItem()"
+                                        type="button"
+                                        class="mx-3 btn btn-light-info font-weight-bolder btn-sm"
+                                >Thêm mới
+                                </button>
 
-                            <button onclick="onDownLoad()"
-                                    type="button"
-                                    class="mx-3 btn btn-light-primary font-weight-bolder btn-sm">Tải
-                            </button>
+                                <button onclick="onDownLoad()"
+                                        type="button"
+                                        class="mx-3 btn btn-light-primary font-weight-bolder btn-sm">Tải danh sách
+                                </button>
 
-                            <div class="input-group w-auto mx-3">
-                                <input id="upload-file" class="btn btn-sm" type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
-                                <div class="input-group-append">
-                                    <button onclick="onUploadExcel()" class="btn btn-outline-secondary" type="button">Upload</button>
+                                <div class="input-group w-auto mx-3">
+                                    <input id="upload-file" class="btn btn-sm" type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+                                    <div class="input-group-append">
+                                        <button onclick="onUploadExcel()" class="btn btn-outline-secondary" type="button">Upload</button>
+                                    </div>
                                 </div>
-                            </div>
+                            </c:if>
+
 
                             <!--end::Actions-->
                         </div>
@@ -95,9 +97,9 @@
                 <!--begin::Entry-->
                 <div class="d-flex flex-column-fluid">
                     <!--begin::Container-->
-                    <div class="container">
+                    <div class="px-5 w-100">
                         <div class="card">
-                            <div class="card-header"></div>
+                            <%--<div class="card-header"></div>--%>
                             <div class="card-body">
                                 <div class="w-100 table-pagination">
                                     <table class="table table-bordered" id="table-han-viet">
@@ -111,15 +113,28 @@
                                         <th>Thành ngữ</th>
                                         <th>Bộ thủ</th>
                                         <th>Chú thích</th>
-                                        <th>#</th>
+                                        <c:if test="${IS_LOGIN}">
+                                            <th>#</th>
+                                        </c:if>
                                         </thead>
                                         <tbody id="table-body-han-viet">
 
                                         </tbody>
                                     </table>
 
-                                    <div class="w-100 d-flex">
+                                    <div class="w-100 d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <span id="info-paging"></span>
+                                        </div>
+
                                         <ul class="pagination" id="pagination"></ul>
+
+                                        <select id="pageSize" class="form-control w-75px">
+                                            <option value="10">10</option>
+                                            <option value="20">20</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -245,12 +260,16 @@
             <td>{{arrayAsString(thanhNgus)}}</td>
             <td>{{render(boThu)}}</td>
             <td>{{render(chuThich)}}</td>
-            <td>
-                <div class="">
-                    <button class="btn btn-success btn-han-viet-edit mx-2 btn-sm" itemId="{{id}}">Sửa</button>
-                    <button class="btn btn-danger btn-han-viet-del mx-2 btn-sm" itemId="{{id}}">Xóa</button>
-                </div>
-            </td>
+
+            <c:if test="${IS_LOGIN}">
+                <td>
+                    <div class="">
+                        <button class="btn btn-success btn-han-viet-edit mx-2 btn-sm" itemId="{{id}}">Sửa</button>
+                        <button class="btn btn-danger btn-han-viet-del mx-2 btn-sm" itemId="{{id}}">Xóa</button>
+                    </div>
+                </td>
+            </c:if>
+
 
         </tr>
         </tbody>
@@ -264,6 +283,7 @@
     window.model = {
         totalpage : 1,
         currentPage : 0,
+        pageSize : 20,
         searchModel : {
             keyword : ''
         }
@@ -283,8 +303,13 @@
 
     function init() {
         templateAe = render.initTemplateObject(templateAe.id);
+        $('#pageSize').val(model.pageSize);
         onSearch();
     }
+    $('#pageSize').on('change', function() {
+        model.pageSize = parseInt(this.value);
+        onSearch()
+    });
 
     function onSearch(page = 0) {
         getData(page, (data) => {
@@ -312,13 +337,19 @@
     }
 
     function getData(page, fnLoadDataSuccessful = null) {
-        ajax.ajaxPost(API_SEARCH, {
+        const option = {
             keyword : $("#input-search").val(),
             page: page,
-            size: pageSizeDefault
-        }, (data) => {
+            size: model.pageSize,
+        };
+        ajax.ajaxPost(API_SEARCH, option, (data) => {
             model.currentPage = data.pageNumber;
             model.totalpage = data.totalPage;
+
+            const form = data.pageNumber * data.pageSize + 1;
+            const to = form + data.pageSize - 1;
+            $('#info-paging').html('tổng cộng ' + data.totalElements + ' phần tử ,hiện thị từ ' + form + ' đến ' + to);
+
             renderTableData(data.items);
             if (fnLoadDataSuccessful != null) {
                 fnLoadDataSuccessful(data);

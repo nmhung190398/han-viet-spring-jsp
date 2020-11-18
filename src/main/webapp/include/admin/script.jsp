@@ -66,6 +66,10 @@
         "font-family": "Poppins",
     };
 </script>
+
+<script>
+
+</script>
 <!--end::Global Config-->
 <!--begin::Global Theme Bundle(used by all pages)-->
 <script src="<%=request.getContextPath() %>/resources/assets/plugins/global/plugins.bundle.js"></script>
@@ -79,3 +83,10 @@
 <script src="<%=request.getContextPath() %>/resources/assets/js/pages/widgets.js"></script>
 <script src="<%=request.getContextPath() %>/resources/assets/js/jquery.twbsPagination.min.js"></script>
 <script src="<%=request.getContextPath() %>/resources/assets/js/site.js"></script>
+
+<script>
+    const error = nmhung.getDataInUrl('error');
+    if(error == 'login-error'){
+        nmhung.showError("Đăng nhập thất bại");
+    }
+</script>
