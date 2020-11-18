@@ -17,6 +17,6 @@ public class HomeController {
 	@GetMapping(value = {"/home","/"})
 	public String homeWeb(Model model) {
 
-		return "admin/home";
+		return "admin/han-viet/han-viet";
 	}
 }
